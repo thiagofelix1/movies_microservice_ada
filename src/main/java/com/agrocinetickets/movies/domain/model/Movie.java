@@ -8,7 +8,6 @@ import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Table("movie")
 @Data
@@ -52,4 +51,5 @@ public class Movie {
 
     @Column("deadline")
     private LocalDate deadline;
+
 }

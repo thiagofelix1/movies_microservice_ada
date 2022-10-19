@@ -21,25 +21,24 @@ public class MoviesApplication {
 		SpringApplication.run(MoviesApplication.class, args);
 	}
 
-//	@PostConstruct
-//	public void post() {
-//		movieRepository.save(Movie.builder()
-//						.imdbId(String.valueOf(new Random().nextInt(999999999)))
-//						.title("Inception")
-//						.year("2010")
-//						.rated("PG-13")
-//						.genre("Action")
-//						.director("Christopher Nolan")
-//						.runtime("148 min")
-//						.plot("sao paulo")
-//						.language("English, Portuguese")
-//						.poster("poster")
-//						.deadline(LocalDate.now())
-//						.build())
-//				.subscribe();
-//		Flux<Movie> flux = movieRepository.findAll();
-//		flux.map(t -> {System.out.println(t); return t;}).subscribe();
-//		System.out.println();
-//	}
+	@PostConstruct
+	public void post() {
+		movieRepository.save(Movie.builder()
+						.imdbId(String.valueOf(new Random().nextInt(999999999)))
+						.title("Inception")
+						.year("2010")
+						.rated("PG-13")
+						.genre("Action")
+						.director("Christopher Nolan")
+						.runtime("148 min")
+						.plot("sao paulo")
+						.language("English, Portuguese")
+						.poster("poster")
+						.deadline(LocalDate.now())
+						.build())
+				.subscribe();
+		Flux<Movie> flux = movieRepository.findAll();
+		flux.map(t -> {System.out.println(t); return t;}).subscribe();
+	}
 
 }
