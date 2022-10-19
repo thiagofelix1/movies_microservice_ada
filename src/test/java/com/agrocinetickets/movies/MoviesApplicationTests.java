@@ -1,4 +1,4 @@
-package com.agrocinetickets.Movies;
+package com.agrocinetickets.movies;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

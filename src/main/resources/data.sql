@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS movie(
+    agro_id SERIAL PRIMARY KEY,
+    imdb_id VARCHAR(10) UNIQUE NOT NULL,
+    title VARCHAR(250) NOT NULL,
+    year VARCHAR(4) NOT NULL,
+    rated VARCHAR(100) NOT NULL,
+    genre VARCHAR(100) NOT NULL,
+    director VARCHAR(100) NOT NULL,
+    plot VARCHAR(1000) NOT NULL,
+    poster VARCHAR(1000) NOT NULL,
+    runtime VARCHAR(7) NOT NULL,
+    language VARCHAR(1000) NOT NULL,
+    deadline DATE NOT NULL
+);
